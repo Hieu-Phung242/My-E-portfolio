@@ -14,7 +14,7 @@ website:
         text: Publications
       - href: content.qmd
         text: Content & Deliverables
-      - href: index.qmd
+      - href: aboutme.qmd
         text: About me
 
 format:
