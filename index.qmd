@@ -10,7 +10,7 @@ about:
       href: linkedin.com/in/hieu-phung-465699154
     - icon: github
       text: GitHub
-      href: https://github.com/ramonmelser
+      href: https://hieu-phung242.github.io/My-E-portfolio/
     - icon: envelope-at
       text: Email
       href: mailto:phungchihieu24296@gmail.com
