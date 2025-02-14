@@ -19,6 +19,8 @@ website:
       - text: Other Projects
         menu:
           - href: other_projects.qmd
+            text: Overview
+          - href: thesis1.qmd
             text: Molten Salt Carbonate Electrolysis
           - href: thesis2.qmd
             text: Effect of Nanoparticles on TiO2
