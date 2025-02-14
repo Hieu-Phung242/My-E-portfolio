@@ -201,5 +201,26 @@
     "title": "Molten Salt Carbonate Electrolysis",
     "section": "",
     "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gem520_finallab.html",
+    "href": "gem520_finallab.html",
+    "title": "Analysis of Burn Severity and Vegetation Recovery at Prouton Lake, BC",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gem520_finallab.html#introduction",
+    "href": "gem520_finallab.html#introduction",
+    "title": "Analysis of Burn Severity and Vegetation Recovery at Prouton Lake, BC",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gem520_finallab.html#running-code",
+    "href": "gem520_finallab.html#running-code",
+    "title": "Analysis of Burn Severity and Vegetation Recovery at Prouton Lake, BC",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
   }
 ]
