@@ -4,7 +4,7 @@ title: "Resume"
 
 # Education 
 
-- Master of Geomatics for Environmental Management (July, 2024 - current)
+- **Master of Geomatics for Environmental Management (July, 2024 - current)**
   
   The University of British Columbia
   
@@ -12,21 +12,21 @@ title: "Resume"
     Capstone Project: Detecting change of aboveground biomass using Landsat 9, GEDI, and their 
     combination in Kwahu South, Ghana.
 
-- Master of Science (Technology) in Environmental Engineering (August, 2020 - July, 2023)
+- **Master of Science (Technology) in Environmental Engineering (August, 2020 - July, 2023)**
   
   Tampere University
 
     Thesis: Molten Carbonate Salt Electrolysis - Materials Selection, Experimental Design,
     and Carbon Production.
 
-- Bachelor of Engineer in Energy and Environmental Engineering
+- **Bachelor of Engineer in Energy and Environmental Engineering**
 
   Tampere University of Applied Sciences
   
-      Thesis: Effect if Graphene/Gold - nanoparticles composite on the photocatalytics 
-      activity of Titan Dioxide.
+    Thesis: Effect if Graphene/Gold - nanoparticles composite on the photocatalytics 
+    activity of Titan Dioxide.
 
-# Publications
+# Work Experience
 
 *Peer-reviewed publications:*
 
