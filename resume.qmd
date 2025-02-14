@@ -18,7 +18,7 @@ title: "Resume"
     Thesis: Molten Carbonate Salt Electrolysis - Materials Selection, Experimental Design,
     and Carbon Production.
 
-- <span style="color: red;">**Bachelor of Engineer in Energy and Environmental Engineering**</span>
+- <span style="color: red;">**Bachelor of Engineer in Energy and Environmental Engineering (August, 2015 - 06/2019)**</span>
 
   **Tampere University of Applied Sciences**
   
@@ -27,13 +27,7 @@ title: "Resume"
 
 # Work Experience
 
-*Peer-reviewed publications:*
 
--   List any peer-reviewed publications here.
-
-*Reports:*
-
--   List any non-peer reviewed materials you'd like to share here.
 
 # Conferences & Talks
 
