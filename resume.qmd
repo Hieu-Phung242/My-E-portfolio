@@ -5,14 +5,16 @@ title: "Resume"
 # Education 
 
 - Master of Geomatics for Environmental Management (July, 2024 - current)
-The University of British Columbia
+  
+  The University of British Columbia
   
 
     Capstone Project: Detecting change of aboveground biomass using Landsat 9, GEDI, and their 
     combination in Kwahu South, Ghana.
 
 - Master of Science (Technology) in Environmental Engineering (August, 2020 - July, 2023)
-Tampere University
+  
+  Tampere University
 
     Thesis: Molten Carbonate Salt Electrolysis - Materials Selection, Experimental Design,
     and Carbon Production.
