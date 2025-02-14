@@ -4,16 +4,14 @@ format: html
 editor: visual
 ---
 
-# Project 1 - Capstone Deliverables
-
-This is my project results
+# Project 1 - Detecting Change of Aboveground Biomass using Landsat 9, GEDI, and the combination of Landsat 9 and GEDI data.
 
 ::: panel-tabset
-## Content
+## Background
 
 Content details go here.
 
-## Deliverables
+## Objectives
 
 Deliverables information goes here.
 :::
