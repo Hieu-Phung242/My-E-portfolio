@@ -22,6 +22,7 @@ website:
           - text: Bachelor's Thesis
       - href: aboutme.qmd
         text: About me
+        
 format:
   html:
     theme: flatly
