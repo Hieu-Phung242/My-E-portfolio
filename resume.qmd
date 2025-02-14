@@ -19,6 +19,12 @@ title: "Resume"
     Thesis: Molten Carbonate Salt Electrolysis - Materials Selection, Experimental Design,
     and Carbon Production.
 
+- Bachelor of Engineer in Energy and Environmental Engineering
+
+  Tampere University of Applied Sciences
+  
+      Thesis: Effect if Graphene/Gold - nanoparticles composite on the photocatalytics 
+      activity of Titan Dioxide.
 
 # Publications
 
