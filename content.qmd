@@ -2,19 +2,21 @@
 title: "Content & Deliverables"
 format: html
 editor: visual
-navbar:
-  right:
-    - text: "Content & Deliverables"
-      menu:
-        - text: "Content"
-          href: content.qmd
-        - text: "Deliverables"
-          href: deliverables.qmd
 ---
 
 # Project 1 - Capstone Deliverables
 
 This is my project results
+
+::: {.panel-tabset}
+## Content
+
+Content details go here.
+
+## Deliverables
+
+Deliverables information goes here.
+:::
 
 ## Leaflet
 
