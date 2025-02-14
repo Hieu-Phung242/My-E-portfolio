@@ -20,8 +20,8 @@ website:
             text: Molten Salt Carbonate Electrolysis
           - href: thesis2.qmd
             text: Effect of Nanoparticles on TiO2
-      - href: aboutme.qmd
-        text: About me
+      - href: contact.qmd
+        text: Contact
 
 format:
   html:
