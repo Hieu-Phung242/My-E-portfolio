@@ -13,12 +13,7 @@ website:
       - href: publications.qmd
         text: Publications
       - href: content.qmd
-        text: Content & Deliverables
-        menu: 
-        - text: "Content"
-          href: content2.qmd
-        - text: "Deliverables"
-          href: deliverables.qmd
+        text: Content & Deliverable
       - href: aboutme.qmd
         text: About me
 
