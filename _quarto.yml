@@ -16,6 +16,8 @@ website:
         menu:
           - href: content.qmd
             text: Capstone Project
+          - href: gem520_finallab.qmd
+            text: Analysis of Burn Severity and Vegetation Recovery at Prouton Lake, BC
       - text: Other Projects
         menu:
           - href: other_projects.qmd
