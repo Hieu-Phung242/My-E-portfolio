@@ -12,13 +12,14 @@ website:
         text: Resume
       - href: publications.qmd
         text: Publications
-      - href: content.qmd
-        text: Content & Deliverable
+      - text: Content & Deliverable
         menu:
+          - href: content.qmd
+            text: Overview
           - href: thesis1.qmd
-          - text: Molten Salt Carbonate Electrolysis
+            text: Molten Salt Carbonate Electrolysis
           - href: thesis2.qmd
-          - text: Bachelor's Thesis
+            text: Bachelor's Thesis
       - href: aboutme.qmd
         text: About me
 
