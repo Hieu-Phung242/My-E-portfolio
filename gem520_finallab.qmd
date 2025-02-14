@@ -6,7 +6,15 @@ editor: visual
 
 ## Introduction
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+::: {.panel-tabset}
+## Objectives
+
+Content details go here.
+
+## Data descriptions
+
+Deliverables information goes here.
+:::
 
 ## Running Code
 
