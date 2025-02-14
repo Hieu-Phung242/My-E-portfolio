@@ -23,17 +23,49 @@ Deliverables information goes here.
 
 ## Running Code
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+To begin with, I loaded the necessary library used for this analysis task.
 
 ```{r}
-1 + 1
+library(terra)
+library(sf)
+library(readr)
+library(stringr)
+library(lubridate)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(bfast)
 ```
 
-You can add options to executable code like this
+Read the data files to investigate the data and extract the information about total area burned in 2017
 
 ```{r}
-#| echo: false
-2 * 2
+h_fire_ply_polygon <- st_read("C:/Users/hphung.stu/Downloads/GEM520/Labs/Lab8/lab8_finalDemonstrationOfRSkills-assign/data/PROT_HISTORICAL_FIRE_POLYS_SP/H_FIRE_PLY_polygon.shp")
+
+# Extract the data for the year 2017
+fire_2017 <- h_fire_ply_polygon %>% 
+  filter(FIRE_YEAR == 2017)
+
+# Number of fire
+number_of_fire <- nrow(fire_2017)
+print(number_of_fire)
+
+# Total land area burned
+total_area_burned <- sum(fire_2017$SIZE_HA)
+print(total_area_burned)
+
+# Top 3 largest fire in 2017
+three_largest_fire <- fire_2017 %>%
+  arrange(desc(SIZE_HA)) %>% 
+  slice_head(n = 3) %>% 
+  st_drop_geometry()
+
+print(three_largest_fire)
+
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+
+
+
