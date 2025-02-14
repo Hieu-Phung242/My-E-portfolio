@@ -16,6 +16,8 @@ website:
         text: Content & Deliverable
       - href: aboutme.qmd
         text: About me
+      - href: projects.qmd  # New tab added
+        text: Projects
 
 format:
   html:
