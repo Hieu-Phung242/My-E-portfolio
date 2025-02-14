@@ -11,7 +11,7 @@
     "href": "resume.html",
     "title": "Resume",
     "section": "",
-    "text": "Education\n\n Master of Geomatics for Environmental Management (July, 2024 - current)\nThe University of British Columbia\nCapstone Project: Detecting change of aboveground biomass using Landsat 9, GEDI, and their combination in Kwahu South, Ghana.\nMaster of Science (Technology) in Environmental Engineering (August, 2020 - July, 2023)\nTampere University\nThesis: Molten Carbonate Salt Electrolysis - Materials Selection, Experimental Design, and Carbon Production.\nBachelor of Engineer in Energy and Environmental Engineering (August, 2015 - June, 2019)\nTampere University of Applied Sciences\nThesis: Effect if Graphene/Gold - nanoparticles composite on the photocatalytics activity of Titan Dioxide.\n\n\n\nWork Experience\n\n\nConferences & Talks\nInvited Talks\n\nIf you’ve been invited to speak in a professional setting, list that here.\n\nConference Presentations\n\nIf the presentation was at a conference, list them here.\n\n\n\nAwards & Honors\n\nList any scholarships, bursaries, etc.\n\n\n\nTeaching Assistantships\n\nList any TA positions you may have held.\n\n\n\nInstitutional Service\n\nVolunteering etc."
+    "text": "Master of Geomatics for Environmental Management (July, 2024 - current)\nThe University of British Columbia\nCapstone Project: Detecting change of aboveground biomass using Landsat 9, GEDI, and their combination in Kwahu South, Ghana.\nMaster of Science (Technology) in Environmental Engineering (August, 2020 - July, 2023)\nTampere University\nThesis: Molten Carbonate Salt Electrolysis - Materials Selection, Experimental Design, and Carbon Production.\nBachelor of Engineer in Energy and Environmental Engineering (August, 2015 - June, 2019)\nTampere University of Applied Sciences\nThesis: Effect if Graphene/Gold - nanoparticles composite on the photocatalytics activity of Titan Dioxide."
   },
   {
     "objectID": "publications.html",
@@ -75,5 +75,12 @@
     "title": "aboutme",
     "section": "Running Code",
     "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "resume.html#environmental-specialist-internship-hanoi-vietnam",
+    "href": "resume.html#environmental-specialist-internship-hanoi-vietnam",
+    "title": "Resume",
+    "section": "Environmental Specialist (Internship) Hanoi, Vietnam",
+    "text": "Environmental Specialist (Internship) Hanoi, Vietnam\nSTI Vietnam - Conducted research on carbon market and carbon trade in Vietnam as well as in South-East Asia region. - Contributed to write the proposal for the project of LiDAR Image Processing using AI for Affordable Forest Carbon Credit Evaluation and Monitoring in Laos and Vietnam."
   }
 ]
