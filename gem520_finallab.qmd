@@ -4,9 +4,14 @@ format: html
 editor: visual
 ---
 
-## Introduction
 
-::: {.panel-tabset}
+::: panel-tabset
+
+## Background
+
+The background of the Prouton Lake and fire severity
+
+
 ## Objectives
 
 Content details go here.
