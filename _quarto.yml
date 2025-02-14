@@ -15,7 +15,7 @@ website:
       - text: Content & Deliverable
         menu:
           - href: content.qmd
-            text: Overview
+            text: Capstone Project
           - href: thesis1.qmd
             text: Molten Salt Carbonate Electrolysis
           - href: thesis2.qmd

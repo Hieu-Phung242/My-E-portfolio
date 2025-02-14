@@ -8,7 +8,7 @@ editor: visual
 
 This is my project results
 
-::: {.panel-tabset}
+::: panel-tabset
 ## Content
 
 Content details go here.
