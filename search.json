@@ -229,5 +229,26 @@
     "title": "Analysis of Burn Severity and Vegetation Recovery at Prouton Lake, BC",
     "section": "Post-fire vegetation recovery",
     "text": "Post-fire vegetation recovery\n\n# Convert burn severity raster to polygons\nburn_severity_masked &lt;- mask(burn_severity, vect(prouton_lake_fire_extent))  # Mask to the fire extent\nburn_severity_polygons &lt;- as.polygons(burn_severity_masked, dissolve = TRUE)\n\n# Create an ID column in burn_severity_polygons\nburn_severity_polygons$ID &lt;- 1:nrow(burn_severity_polygons)\n\n# Extract NDVI values for each year and burn severity class\nyears &lt;- c(2018, 2019, 2020, 2021)\nndvi_values &lt;- list()\n\nfor (year in years) {\n  ndvi_raster &lt;- yearly_composites_ndvi[[as.character(year)]]\n  \n  # Extract NDVI values by burn severity polygons\n  extracted_values &lt;- terra::extract(ndvi_raster, burn_severity_polygons,\n                                     xy = TRUE, ID = TRUE)\n  \n  # Add burn severity class and year to extracted data\n  extracted_values &lt;- merge(extracted_values, burn_severity_polygons, by = \"ID\",\n                            all.x = TRUE)\n  \n  # Add the year column to the extracted data\n  extracted_values$year &lt;- year\n  ndvi_values[[as.character(year)]] &lt;- extracted_values\n}\n\n# Combine data for all years into a single dataframe\nndvi_all_years &lt;- do.call(rbind, ndvi_values)\nhead(ndvi_all_years)\n\n       ID      mean      x       y    label year\n2018.1  1 0.2663470 585420 5814480 unburned 2018\n2018.2  1 0.2561202 585450 5814480 unburned 2018\n2018.3  1 0.2355936 585390 5814450 unburned 2018\n2018.4  1 0.2287356 585420 5814450 unburned 2018\n2018.5  1 0.2395178 585450 5814450 unburned 2018\n2018.6  1 0.2413820 585480 5814450 unburned 2018\n\n# Ensure burn severity is an ordered factor\nndvi_all_years$severity &lt;- factor(ndvi_all_years$label, \n                                  levels = c(\"unburned\", \n                                             \"low severity\", \n                                             \"medium severity\", \n                                             \"high severity\"),\n                                  ordered = TRUE)\n\n\n# Plot yearly NDVI composites\nfor (year in years) {\n  plot(yearly_composites_ndvi[[as.character(year)]], \n       main = paste(\"Yearly NDVI Composite -\", year), \n       range = c(0, 0.5))  # Set the same value range for all plots\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Create a boxplot of NDVI distributions\nggplot(ndvi_all_years, aes(x = severity, y = mean, fill = severity)) +\n  geom_boxplot() +\n  facet_wrap(~ year) +\n  scale_fill_manual(values = c(\"unburned\" = \"green\", \n                               \"low severity\" = \"yellow\", \n                               \"medium severity\" = \"orange\", \n                               \"high severity\" = \"red\"),\n                    name = \"Burn Severity\") +\n  labs(title = \"Distribution of NDVI Values by Burn Severity Class\",\n       x = \"Burn Severity Class\",\n       y = \"NDVI\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "gem521_lab5.html",
+    "href": "gem521_lab5.html",
+    "title": "Individual Trees Detecting using different methods",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gem521_lab5.html#quarto",
+    "href": "gem521_lab5.html#quarto",
+    "title": "Individual Trees Detecting using different methods",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gem521_lab5.html#running-code",
+    "href": "gem521_lab5.html#running-code",
+    "title": "Individual Trees Detecting using different methods",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
   }
 ]
