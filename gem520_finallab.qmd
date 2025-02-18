@@ -36,7 +36,7 @@ library(bfast)
 
 Read the data files to investigate the data and extract the information about total area burned in 2017
 
-```{r}
+```{r,  echo = TRUE, warning = FALSE, message = FALSE}
 h_fire_ply_polygon <- st_read("C:/Users/hphung.stu/Downloads/GEM520/Labs/Lab8/lab8_finalDemonstrationOfRSkills-assign/data/PROT_HISTORICAL_FIRE_POLYS_SP/H_FIRE_PLY_polygon.shp")
 
 # Extract the data for the year 2017
@@ -61,6 +61,23 @@ print(three_largest_fire)
 
 ```
 
-```{r}
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+# Create a bar plot showing total area burned per year in BC
+fire_by_year <- h_fire_ply_polygon %>% 
+  st_drop_geometry() %>% 
+  group_by(FIRE_YEAR, FIRE_CAUSE) %>% 
+  summarize(TOTAL_AREA = sum(SIZE_HA, na.rm = TRUE))
 
+```
+
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+# Create a bar plot showing total area burned per year in BC
+
+ggplot(fire_by_year, aes(x = FIRE_YEAR, y = TOTAL_AREA, fill = FIRE_CAUSE)) +
+  geom_bar(stat = "identity") +
+  scale_fill_brewer(palette = "Set1") +
+  labs(x = "Year", y = "Total Area Burned (Hectares)", 
+       title = "Total Area Burned per Year in BC by Fire Cause") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
