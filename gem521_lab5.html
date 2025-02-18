@@ -254,6 +254,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter the points with height below 0m and above 65m</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">opt_filter</span>(norm_cat_mkrf) <span class="ot">&lt;-</span> <span class="st">'-drop_z_below 0 -drop_z_above 65'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Extract the specific plot. The coordinate of the plot is listed in the .csv files.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract specific plot</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>lab5_plot_table <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/lab5_Plots.csv"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#define the radius</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>radius <span class="ot">&lt;-</span> <span class="dv">154</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#use for loop to extract the plots</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(lab5_plot_table)){</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  lab5_plot_cent <span class="ot">&lt;-</span> <span class="fu">c</span>(lab5_plot_table<span class="sc">$</span>X[i], lab5_plot_table<span class="sc">$</span>Y[i]) <span class="co">#extract plot center coordinates</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  plot_las <span class="ot">&lt;-</span> <span class="fu">clip_circle</span>(norm_cat_mkrf, lab5_plot_cent[<span class="dv">1</span>], lab5_plot_cent[<span class="dv">2</span>], radius) <span class="co">#clip plot from norm_cat_mkrf</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  output_file <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_"</span>, </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                       i, <span class="st">".las"</span>, <span class="at">sep =</span> <span class="st">""</span>) <span class="co">#output directory as string</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writeLAS</span>(<span class="fu">assign</span>(<span class="fu">paste</span>(<span class="st">"C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_"</span>, </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                        i, <span class="at">sep =</span> <span class="st">""</span>), plot_las), output_file) <span class="co">#write'MKRF_Plot_i' to output dir.</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Chunk 1 of 1 (100%): state ✓</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="gem521_lab5_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Chunk 1 of 1 (100%): state ✓</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Chunk 1 of 1 (100%): state ✓</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="gem521_lab5_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Chunk 1 of 1 (100%): state ✓</code></pre>
+</div>
+</div>
 
 
 </section>
