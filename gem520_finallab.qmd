@@ -6,16 +6,25 @@ editor: visual
 
 ::: panel-tabset
 ## Background
+Prouton Lakes is located in the Cariboo Chilcotin Region of British Columbia, Canada, east of Williams Lake (Kitchen et al., 2022). It is situated near the Alex Fraser Research Forest (AFRF), which serves as a research and education site for sustainable forest management (Kitchen et al., 2022). 
 
-The background of the Prouton Lake and fire severity
+Fire severity analysis is a crucial aspect of post-fire ecosystem assessment and management (Miller et al., 2023). It involves classifying burned areas into different severity classes based on the degree of ecological change caused by the fire (Miller et al., 2023). 
 
 ## Objectives
 
-Content details go here.
+The aim of this lab is to investigate the burn severity at Prouton Lake as well as the recovery of vegetation in the years after the fire (2018 -2021).
 
 ## Data descriptions
 
-Deliverables information goes here.
+- Landsat 8 Collection 2 Level 2
+
+## References
+
+Mitchell, K. A., Peng, L., Daniels, L., & Carroll, A. (2022). Patterns of infestation by subcortical insects (Coleoptera: Buprestidae, Cerambycidae) after widespread wildfires in mature Douglas-fir (Pseudotsuga menziesii) forests. Forest Ecology and Management, 513(1), Article 120203. https://doi.org/10.1016/j.foreco.2022.120203
+
+Miller, C. W., Harvey, B. J., Kane, V. R., Moskal, L. M., & Alvarado, E. (2023). Different approaches make comparing studies of burn severity challenging: A review of methods used to link remotely sensed data with the Composite Burn Index. International Journal of Wildland Fire. https://doi.org/10.1071/WF22050
+
+
 :::
 
 ## Running Code
