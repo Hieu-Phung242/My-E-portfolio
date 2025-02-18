@@ -4,8 +4,72 @@ format: html
 editor: visual
 ---
 
-## Quarto
+::: panel-tabset
+## Background
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+The Malcolm Knapp Research Forest (MKRF) is a 5,157-hectare forest located in Maple Ridge, British Columbia, approximately 60 km from Vancouver (The University of British Columbia, n.d.). Established in 1949, it serves as a world-class environment for research and education in forestry and sciences (The University of British Columbia, n.d.).
 
-## Running Code
+Individual tree detection (ITD) is a crucial technique in forest inventory and management for subsequent estimation of tree species, height, diameter, crown size and location (Luo et al., n.d). In this task, I am doing ITD using point cloud method and canopy height model derived method. The methods used in this tasks are based on Li et al., 2012 and Dalponte & Coomes, 2016.
+
+## Objectives
+
+The aim of this work is to apply 2 methods from Li et al. 2012 and Dalponte and Coomes 2016, which are point cloud method and CHM derived method.
+
+## Data descriptions
+
+-   LiDAR point cloud data
+
+## References
+
+Dalponte, M., & Coomes, D. A. (2016). Tree-centric mapping of forest carbon density from airborne laser scanning and hyperspectral data. Methods in Ecology and Evolution, 7(10), 1236-1245.
+
+Li, W., Guo, Q., Jakubowski, M. K., & Kelly, M. (2012). A new method for segmenting individual trees from the lidar point cloud. Photogrammetric Engineering & Remote Sensing, 78(1), 75-84.
+
+Luo, Z., Zhang, Z., Li, W., Chen, Y., Wang, C., Nurunnabi, A., & Li, J. (n.d). Detection of individual trees in UAV LiDAR point clouds using a deep learning framework based on multi-channel representation. IEEE Transactions on Geoscience and Remote Sensing, 59(7), 5769-5785.
+:::
+
+## Code
+
+Load the necessary library
+
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+library(lidR)
+library(terra)
+library(tidyverse)
+library(rgl)
+
+```
+
+
+Preparation of data for analysis
+
+For this study, the LiDAR point cloud data, stored in .las files, had already been normalized. This pre-processing step simplifies subsequent analysis by adjusting the elevation values relative to the ground surface rather than absolute elevation.
+
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
+# Read normalized .las file into catalog for further processing
+norm_cat_mkrf <- readLAScatalog("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 2/L2_data/Data/Normalized")
+
+# Filter the points with height below 0m and above 65m
+opt_filter(norm_cat_mkrf) <- '-drop_z_below 0 -drop_z_above 65'
+
+```
+
+
+```{r}
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -250,5 +250,12 @@
     "title": "Individual Trees Detecting using different methods",
     "section": "Running Code",
     "text": "Running Code"
+  },
+  {
+    "objectID": "gem521_lab5.html#code",
+    "href": "gem521_lab5.html#code",
+    "title": "Individual Trees Detecting using different methods",
+    "section": "Code",
+    "text": "Code\nLoad the necessary library\n\nlibrary(lidR)\nlibrary(terra)\nlibrary(tidyverse)\nlibrary(rgl)\n\nPreparation of data for analysis\nFor this study, the LiDAR point cloud data, stored in .las files, had already been normalized. This pre-processing step simplifies subsequent analysis by adjusting the elevation values relative to the ground surface rather than absolute elevation.\n\n# Read normalized .las file into catalog for further processing\nnorm_cat_mkrf &lt;- readLAScatalog(\"C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 2/L2_data/Data/Normalized\")\n\n# Filter the points with height below 0m and above 65m\nopt_filter(norm_cat_mkrf) &lt;- '-drop_z_below 0 -drop_z_above 65'"
   }
 ]
