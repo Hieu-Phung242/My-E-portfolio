@@ -4,13 +4,10 @@ format: html
 editor: visual
 ---
 
-
 ::: panel-tabset
-
 ## Background
 
 The background of the Prouton Lake and fire severity
-
 
 ## Objectives
 
@@ -25,7 +22,7 @@ Deliverables information goes here.
 
 To begin with, I loaded the necessary library used for this analysis task.
 
-```{r}
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
 library(terra)
 library(sf)
 library(readr)
@@ -67,7 +64,3 @@ print(three_largest_fire)
 ```{r}
 
 ```
-
-
-
-
