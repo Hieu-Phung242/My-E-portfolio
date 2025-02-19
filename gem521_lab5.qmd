@@ -99,7 +99,7 @@ Lab5_Plot_4 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab
 ## Detect individual trees using a point cloud
 
 
-```{r}
+```{r, echo = TRUE, warning = FALSE, message = FALSE}
 # Create a list to store the segmented plots
 segmented_plots <- list()
 
