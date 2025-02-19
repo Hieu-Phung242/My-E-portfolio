@@ -18,6 +18,8 @@ website:
             text: Analysis of Burn Severity and Vegetation Recovery at Prouton Lake, BC
           - href: gem521_lab5.qmd
             text: Individual Trees Detecting using different methods
+          - href: gem510_lab3.qmd
+            text: Analysis of Suitable Sanctuaries for Humpback Whales
       - text: Other Projects
         menu:
           - href: other_projects.qmd

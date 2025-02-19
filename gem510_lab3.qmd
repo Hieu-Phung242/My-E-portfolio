@@ -1,0 +1,22 @@
+---
+title: "Analysis of Suitable Sanctuaries for Humpback Whales"
+format: html
+editor: visual
+---
+
+::: panel-tabset
+## Background
+
+
+
+## Objectives
+
+
+
+## Data descriptions
+
+
+
+## References
+
+
