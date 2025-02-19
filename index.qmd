@@ -1,5 +1,5 @@
 ---
-title: "Exploring the Art of Solutions and Design"
+title: "Exploring the Art of Solutions and Design - Innovating at the crossroads of environment and technology"
 image: images/profile_picture.png
 about:
   template: trestles
