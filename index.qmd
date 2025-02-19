@@ -1,5 +1,5 @@
 ---
-title: "My E-Portfolio"
+title: "Hieu (Heal) Phung E-Portfolio"
 image: images/profile_picture.png
 about:
   template: trestles
