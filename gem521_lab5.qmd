@@ -42,7 +42,6 @@ library(rgl)
 
 ```
 
-
 Preparation of data for analysis
 
 For this study, the LiDAR point cloud data, stored in .las files, had already been normalized. This pre-processing step simplifies subsequent analysis by adjusting the elevation values relative to the ground surface rather than absolute elevation.
@@ -55,7 +54,6 @@ norm_cat_mkrf <- readLAScatalog("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 2
 opt_filter(norm_cat_mkrf) <- '-drop_z_below 0 -drop_z_above 65'
 
 ```
-
 
 Extract the specific plot. The coordinate of the plot is listed in the .csv files.
 
@@ -79,8 +77,6 @@ for (i in 1:nrow(lab5_plot_table)){
 
 ```
 
-
-
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Explore the plots
 Lab5_Plot_1 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_1.las")
@@ -93,13 +89,9 @@ Lab5_Plot_4 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab
 
 ```
 
-
-
-
 ## Detect individual trees using a point cloud
 
-
-```{r, echo = TRUE, warning = FALSE, message = FALSE}
+```{r, echo = TRUE, warning = FALSE, message = FALSE, results = "hide"}
 # Create a list to store the segmented plots
 segmented_plots <- list()
 
@@ -123,8 +115,6 @@ for (i in 1:4) {
 
 ```
 
-
-
 ```{r}
 # Plot each segmented plot colored by Tree ID
 for (i in 1:4) {
@@ -132,10 +122,7 @@ for (i in 1:4) {
 }
 ```
 
-
-
 ## Detect individual trees using a CHM
-
 
 ```{r}
 # Create CHM for plot 1 using pitfree algorithm
@@ -150,7 +137,6 @@ plot(chm_plot1, main = "CHM - Plot 1")
 
 ```
 
-
 ```{r, echo = TRUE, warning = FALSE}
 # Locate tree tops using lmf algorithm
 tree_tops <- locate_trees(chm_plot1,
@@ -164,7 +150,6 @@ plot(tree_tops, add = TRUE, col = "red", pch = 20)
 
 ```
 
-
 ```{r}
 # Using Dalponte and Coomes 2016 algorithm to detect individual trees
 tree_crowns_plot1 <- segment_trees(Lab5_Plot_1, dalponte2016(chm_plot1, 
@@ -177,7 +162,6 @@ tree_crowns_plot1 <- segment_trees(Lab5_Plot_1, dalponte2016(chm_plot1,
 plot(tree_crowns_plot1, color = "treeID")
 
 ```
-
 
 Performing individual tree detection for plot 2 with different resolution (0.5m, 2m, 4m, and 10m)
 
@@ -227,6 +211,3 @@ for (res in resolutions) {
 
 
 ```
-
-
-
