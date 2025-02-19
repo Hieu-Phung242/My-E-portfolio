@@ -26,6 +26,8 @@ Dalponte, M., & Coomes, D. A. (2016). Tree-centric mapping of forest carbon dens
 Li, W., Guo, Q., Jakubowski, M. K., & Kelly, M. (2012). A new method for segmenting individual trees from the lidar point cloud. Photogrammetric Engineering & Remote Sensing, 78(1), 75-84.
 
 Luo, Z., Zhang, Z., Li, W., Chen, Y., Wang, C., Nurunnabi, A., & Li, J. (n.d). Detection of individual trees in UAV LiDAR point clouds using a deep learning framework based on multi-channel representation. IEEE Transactions on Geoscience and Remote Sensing, 59(7), 5769-5785.
+
+The University of British Columbia. (n.d). Malcolm Knapp Reseach Forest. https://www.mkrf.forestry.ubc.ca/about/
 :::
 
 ## Pre-processing the data
@@ -74,6 +76,20 @@ for (i in 1:nrow(lab5_plot_table)){
                         i, sep = ""), plot_las), output_file) #write'MKRF_Plot_i' to output dir.
 }
 
+
+```
+
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Explore the plots
+Lab5_Plot_1 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_1.las")
+
+Lab5_Plot_2 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_2.las")
+
+Lab5_Plot_3 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_3.las")
+
+Lab5_Plot_4 <- readLAS("C:/Users/hphung.stu/Downloads/GEM521/Labs/Lab 5/Data/Lab5_Plots/Lab5_Plot_4.las")
 
 ```
 
