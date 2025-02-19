@@ -1,5 +1,5 @@
 ---
-title: "Exploring the Art of Solutions and Design - Innovating at the crossroads of environment and technology"
+title: "Exploring the Art of Solutions and Design - Innovating at the crossroads of Forestry, Remote Sensing, and Environment"
 image: images/profile_picture.png
 about:
   template: trestles
