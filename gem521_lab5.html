@@ -383,69 +383,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(tree_crowns_plot1, <span class="at">color =</span> <span class="st">"treeID"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="{html}">
-<style>
-  .container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px; /* Space between plots */
-  }
-  .plot-box {
-    width: 48%; /* Adjust for equal size */
-  }
-</style>
-<div class="container">
-<div class="plot-box">
-<pre><code>&lt;iframe src="interactive_plot_li.html" width="100%" height="600px"&gt;&lt;/iframe&gt;</code></pre>
-</div>
-<div class="plot-box">
-<pre><code>&lt;iframe src="interactive_plot_dalponte.html" width="100%" height="600px"&gt;&lt;/iframe&gt;</code></pre>
-</div>
-</div>
+<iframe src="interactive_plot_li.html" width="100%" height="600px">
+</iframe>
+<p>Figure 1. ITD using Li et al.&nbsp;2012 method</p>
+<iframe src="interactive_plot_dalponte.html" width="100%" height="600px">
+</iframe>
+<p>Figure 2. ITD using Dalponte and Coomes 2016 method</p>
 </div>
 <p>Performing individual tree detection for plot 2 with different resolution (0.5m, 2m, 4m, and 10m)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define resolution</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>resolutions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create empty lists to store results</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>chm_list_plot2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>tree_tops_list_plot2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>tree_crowns_list_plot2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Performing loop through each resolution</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (res <span class="cf">in</span> resolutions) {</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create CHM using pitfree algorithm</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  chm_plot2 <span class="ot">&lt;-</span> <span class="fu">rasterize_canopy</span>(Lab5_Plot_2,</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                                <span class="at">res =</span> res,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>                                <span class="at">algorithm =</span> <span class="fu">pitfree</span>(<span class="at">thresholds =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>),</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                                                    <span class="at">subcircle =</span> <span class="fl">0.2</span>,</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                                                    <span class="at">max_edge =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)))</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># store the CHM to the chm_list_plot2</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  chm_list_plot2[[<span class="fu">as.character</span>(res)]] <span class="ot">&lt;-</span> chm_plot2</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># locate tree tops using lmf algorithm</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  tree_tops_plot2 <span class="ot">&lt;-</span> <span class="fu">locate_trees</span>(chm_plot2, <span class="fu">lmf</span>(<span class="at">ws =</span> <span class="dv">5</span>, <span class="at">hmin =</span> <span class="dv">2</span>))</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># store the tree tops to the tree_tops_list_plot2</span></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>  tree_tops_list_plot2[[<span class="fu">as.character</span>(res)]] <span class="ot">&lt;-</span> tree_tops_plot2</span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># perform tree segmentation using Dalponte and Coomes (2016) algorithm</span></span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>  tree_crowns_plot2 <span class="ot">&lt;-</span> <span class="fu">segment_trees</span>(Lab5_Plot_2,</span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>                                     <span class="fu">dalponte2016</span>(chm_plot2,</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>                                                  tree_tops_plot2,</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">th_tree =</span> <span class="dv">2</span>,</span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">th_seed =</span> <span class="fl">0.45</span>,</span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">th_cr =</span> <span class="fl">0.55</span>,</span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">max_cr =</span> <span class="dv">10</span>,</span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">ID =</span> <span class="st">"treeID"</span>))</span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>  <span class="co"># store segment tree crowns to the tree_crown_list_plot2</span></span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>  tree_crowns_list_plot2[[<span class="fu">as.character</span>(res)]] <span class="ot">&lt;-</span> tree_crowns_plot2</span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># plot CHM and tree segmentation</span></span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(chm_plot2, <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"CHM Plot 2("</span>, res, <span class="st">"m)"</span>, <span class="at">sep =</span> <span class="st">""</span>))</span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(tree_crowns_plot2, <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Tree Segmentation Plot 2 ("</span>, res, <span class="st">"m)"</span>, <span class="at">sep =</span> <span class="st">""</span>), <span class="at">color =</span> <span class="st">"treeID"</span>)</span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define resolution</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>resolutions <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create empty lists to store results</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>chm_list_plot2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>tree_tops_list_plot2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>tree_crowns_list_plot2 <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Performing loop through each resolution</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (res <span class="cf">in</span> resolutions) {</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># create CHM using pitfree algorithm</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  chm_plot2 <span class="ot">&lt;-</span> <span class="fu">rasterize_canopy</span>(Lab5_Plot_2,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                                <span class="at">res =</span> res,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                                <span class="at">algorithm =</span> <span class="fu">pitfree</span>(<span class="at">thresholds =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>),</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>                                                    <span class="at">subcircle =</span> <span class="fl">0.2</span>,</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>                                                    <span class="at">max_edge =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)))</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># store the CHM to the chm_list_plot2</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  chm_list_plot2[[<span class="fu">as.character</span>(res)]] <span class="ot">&lt;-</span> chm_plot2</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># locate tree tops using lmf algorithm</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  tree_tops_plot2 <span class="ot">&lt;-</span> <span class="fu">locate_trees</span>(chm_plot2, <span class="fu">lmf</span>(<span class="at">ws =</span> <span class="dv">5</span>, <span class="at">hmin =</span> <span class="dv">2</span>))</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># store the tree tops to the tree_tops_list_plot2</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  tree_tops_list_plot2[[<span class="fu">as.character</span>(res)]] <span class="ot">&lt;-</span> tree_tops_plot2</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># perform tree segmentation using Dalponte and Coomes (2016) algorithm</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>  tree_crowns_plot2 <span class="ot">&lt;-</span> <span class="fu">segment_trees</span>(Lab5_Plot_2,</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>                                     <span class="fu">dalponte2016</span>(chm_plot2,</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>                                                  tree_tops_plot2,</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">th_tree =</span> <span class="dv">2</span>,</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">th_seed =</span> <span class="fl">0.45</span>,</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">th_cr =</span> <span class="fl">0.55</span>,</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">max_cr =</span> <span class="dv">10</span>,</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>                                                  <span class="at">ID =</span> <span class="st">"treeID"</span>))</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>  <span class="co"># store segment tree crowns to the tree_crown_list_plot2</span></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>  tree_crowns_list_plot2[[<span class="fu">as.character</span>(res)]] <span class="ot">&lt;-</span> tree_crowns_plot2</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># plot CHM and tree segmentation</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(chm_plot2, <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"CHM Plot 2("</span>, res, <span class="st">"m)"</span>, <span class="at">sep =</span> <span class="st">""</span>))</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(tree_crowns_plot2, <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Tree Segmentation Plot 2 ("</span>, res, <span class="st">"m)"</span>, <span class="at">sep =</span> <span class="st">""</span>), <span class="at">color =</span> <span class="st">"treeID"</span>)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

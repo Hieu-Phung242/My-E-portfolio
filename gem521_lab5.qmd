@@ -188,28 +188,15 @@ rglwidget_obj_2 <- rglwidget()
 saveWidget(rglwidget_obj_2, file = "interactive_plot_dalponte.html", selfcontained = TRUE)
 
 
+
 ```
 
 ::: {html}
-<style>
-  .container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px; /* Space between plots */
-  }
-  .plot-box {
-    width: 48%; /* Adjust for equal size */
-  }
-</style>
+<iframe src="interactive_plot_li.html" width="100%" height="600px"></iframe>
+Figure 1. ITD using Li et al. 2012 method
 
-<div class="container">
-  <div class="plot-box">
-    <iframe src="interactive_plot_li.html" width="100%" height="600px"></iframe>
-  </div>
-  <div class="plot-box">
-    <iframe src="interactive_plot_dalponte.html" width="100%" height="600px"></iframe>
-  </div>
-</div>
+<iframe src="interactive_plot_dalponte.html" width="100%" height="600px"></iframe>
+Figure 2. ITD using Dalponte and Coomes 2016 method
 :::
 
 
