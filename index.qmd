@@ -1,5 +1,5 @@
 ---
-title: "Hieu (Heal) Phung E-Portfolio"
+title: "Exploring the Art of Solutions and Design"
 image: images/profile_picture.png
 about:
   template: trestles
@@ -18,7 +18,7 @@ about:
 
 Hello
 
-My name is Hieu Phung.
+My name is Hieu (Heal) Phung.
 
 I am currently studying Master of Geomatics for Environmental Management at The University of British Columbia.
 
