@@ -7,7 +7,7 @@ about:
   links: 
     - icon: linkedin
       text: LinkedIn
-      href: linkedin.com/in/hieu-phung-465699154/
+      href: https://www.linkedin.com/in/hieu-phung-465699154/
     - icon: github
       text: GitHub
       href: https://hieu-phung242.github.io/My-E-portfolio/
