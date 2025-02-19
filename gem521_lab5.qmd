@@ -202,6 +202,8 @@ Figure 2. ITD using Dalponte and Coomes 2016 method
 
 Performing individual tree detection for plot 2 with different resolution (0.5m, 2m, 4m, and 10m)
 
+
+
 ```{r}
 # Define resolution
 resolutions <- c(0.5, 2, 4, 10)
@@ -210,6 +212,9 @@ resolutions <- c(0.5, 2, 4, 10)
 chm_list_plot2 <- list()
 tree_tops_list_plot2 <- list()
 tree_crowns_list_plot2 <- list()
+
+# Set up a 2x2 plotting layout
+par(mfrow = c(2,2)) 
 
 # Performing loop through each resolution
 for (res in resolutions) {
