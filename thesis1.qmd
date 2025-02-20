@@ -6,4 +6,4 @@ editor: visual
 
 ## This is my Master's Thesis at Tampere University
 
-## 
+
