@@ -2,11 +2,9 @@
 title: "Resume"
 ---
 
-<<<<<<< HEAD
-# Education 
-=======
+
 # Education
->>>>>>> de32087f497c04d99c0aed90248fab2acecd1dba
+
 
 - <span style="color: red;"> **Master of Geomatics for Environmental Management (July, 2024 - current)**</span>
   
