@@ -20,6 +20,8 @@ website:
             text: Individual Trees Detecting using different methods
           - href: gem510_lab3.qmd
             text: Analysis of Suitable Sanctuaries for Humpback Whales
+          - href: gem500_proposal.qmd
+            text: Proposal: Evaluating the Impact of Landsacape Fragmentation on Carbon Sequestration of Forests in Kwahu South, Ghana using Landscape Metrics and Landsat 8 Data
       - text: Other Projects
         menu:
           - href: other_projects.qmd
