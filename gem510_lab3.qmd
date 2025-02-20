@@ -35,5 +35,37 @@ World Atlas. (n.d). Maps of Hawaii. https://www.worldatlas.com/maps/united-state
 
 
 
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Load library
+library(leaflet)
+library(sf)
+library(htmlwidgets)
+
+```
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Load multiple shapefiles 
+top_5_sanctuary <- st_read("C:/Users/hphung.stu/OneDrive - UBC/Documents/ArcGIS/Projects/Top_Five_Sanctuary.shp")
+
+sanctuary_buffers <- st_read("C:/Users/hphung.stu/OneDrive - UBC/Documents/ArcGIS/Projects/Sanctuary_Buffer.shp")
+
+most_suitable <- st_read("C:/Users/hphung.stu/OneDrive - UBC/Documents/ArcGIS/Projects/Most_Suitable.shp")
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
