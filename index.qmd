@@ -33,5 +33,6 @@ Thank you and enjoy your time exploring my space. Should you have any questions,
 -   Skills: ArcGIS Pro, QGIS, R coding, Python, ENVI, AutoCAD, AutoCAD Plant 3D
 
 ::: {html}
-<img src="images/nasa-global-warming.gif" alt="Global Temperature" width="600px"/>
+<img src="images/nasa-global-warming.gif" alt="Global Temperature" width="400px"/>
 :::
+[gif link](https://tenor.com/view/nasa-global-warming-gif-9361977)
