@@ -17,8 +17,7 @@ In order to complete the tasks, suitability analysis and overlay analysis were p
 
 ## Data descriptions
 
--   The data is obtained from UBC-postgres database.The necessary dataset used in this task are whale species, regions in which the whales appear, human activities that affect the whales. 
-
+-   The data is obtained from UBC-postgres database.The necessary dataset used in this task are whale species, regions in which the whales appear, human activities that affect the whales.
 
 ## References
 
@@ -33,8 +32,6 @@ Hawaii Wildlife Fund. (n.d). Humpback Whale. https://www.wildhawaii.org/wildlife
 World Atlas. (n.d). Maps of Hawaii. https://www.worldatlas.com/maps/united-states/hawaii
 :::
 
-
-
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Load library
 library(leaflet)
@@ -42,7 +39,6 @@ library(sf)
 library(htmlwidgets)
 
 ```
-
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, results = "hide"}
 # Load multiple shapefiles 
@@ -54,19 +50,10 @@ most_suitable <- st_read("C:/Users/hphung.stu/OneDrive - UBC/Documents/ArcGIS/Pr
 
 ```
 
-
-```{r}
+```{r, echo = FALSE}
 # Create a leaflet map
 m <- leaflet() %>% 
   addProviderTiles("Esri.WorldImagery") %>% 
-  
-  #add top_5_sanctuary
-  addPolygons(
-    data = top_5_sanctuary,
-    color = "blue",
-    weight = 2,
-    fillOpacity = 0.5,
-    group = "Sanctuary Areas") %>%
   
   #add sanctuary buffer
   addPolygons(
@@ -74,20 +61,28 @@ m <- leaflet() %>%
     color = "green",
     weight = 2,
     fillOpacity = 0.5,
-    group = "Buffer Areas") %>% 
+    group = "5 Km Buffers") %>% 
+  
+    #add top_5_sanctuary
+  addPolygons(
+    data = top_5_sanctuary,
+    color = "yellow",
+    weight = 2,
+    fillOpacity = 0.75,
+    group = "Top 5 Sanctuary") %>%
   
   #add most_suitable 
   addPolygons(
     data = most_suitable,
     color = "red",
     weight = 2,
-    fillOpacity = 0.5,
+    fillOpacity = 1,
     group = "Most Suitable Area") %>%
   
   #add layer control
   addLayersControl(
     baseGroups = c("Esri World Imagery"),
-    overlayGroups = c("Sanctuary Areas", "Buffer Areas", "Most Suitable Area"),
+    overlayGroups = c("Top 5 Sanctuary", "5 Km Buffer", "Most Suitable Area"),
     options = layersControlOptions(collapsed = FALSE)
   ) %>%
   
@@ -95,7 +90,7 @@ m <- leaflet() %>%
   addLegend(
     position = "bottomright",
     colors = c("blue", "green", "red"),
-    labels = c("Sanctuary Areas", "Buffer Areas", "Most Suitable Area"),
+    labels = c("Top 5 Sanctuary", "5 Km Buffers", "Most Suitable Area"),
     title = "Legend",
     opacity = 1
   ) %>%
@@ -108,16 +103,10 @@ saveWidget(m, "interactive_map.html", selfcontained = TRUE)
   
 ```
 
-
 ::: {html}
-<iframe src="interactive_map.html" width="100%" height="600px"></iframe>
+<iframe src="interactive_map.html" width="100%" height="600px">
+
+</iframe>
 :::
-
-
-
-
-
-
-
 
 
