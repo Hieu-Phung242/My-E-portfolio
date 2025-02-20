@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -196,8 +162,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
+  <li><a href="#introduction-it-is-ambiguous-that-highly-fragmented-forest-enhances-carbon-sequestration-ability." id="toc-introduction-it-is-ambiguous-that-highly-fragmented-forest-enhances-carbon-sequestration-ability." class="nav-link active" data-scroll-target="#introduction-it-is-ambiguous-that-highly-fragmented-forest-enhances-carbon-sequestration-ability.">Introduction: It is ambiguous that highly fragmented forest enhances carbon sequestration ability.</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#expected-results-and-significance" id="toc-expected-results-and-significance" class="nav-link" data-scroll-target="#expected-results-and-significance">Expected results and significance</a></li>
+  <li><a href="#figures-and-tables" id="toc-figures-and-tables" class="nav-link" data-scroll-target="#figures-and-tables">Figures and Tables</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -223,26 +192,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+<section id="introduction-it-is-ambiguous-that-highly-fragmented-forest-enhances-carbon-sequestration-ability." class="level1">
+<h1>Introduction: It is ambiguous that highly fragmented forest enhances carbon sequestration ability.</h1>
+<p>In recent years, the impact of forest fragmentation on carbon sequestration has become a topic of intense scientific debate (Hou et al., 2024; Ma et al., 2017). The increasing fragmentation of forest landscapes poses a significant threat to their ecosystem service (Fischer et al., 2021). While studies suggest that landscape fragmentation leads to reduced carbon storage capacity due to an increase in edge effects (Fischer et al., 2021), others have reported opposite findings (Lei et al., 2024). A recent study in subtropical forests found that carbon uptake capacity per unit area was enhanced in highly fragmented forest landscape (Jiao et al., 2024). The controversies of carbon uptake capacity between fragmented forest and continuous forest have prompted the need for further research in diverse forest ecosystems.</p>
+<p>To address this research gap, my study aims to evaluate the impact of landscape fragmentation on carbon sequestration of forest in Kwahu South, Ghana. Additionally, the impact of landscape fragmentation in the studied area on carbon absorption ability remain poorly understood. In this study, I will use landscape metrics derived from satellite imagery (Landsat 8) and combine them with carbon stock estimates to quantify the relationship between forest fragmentation and carbon sequestration capacity.</p>
 </section>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<p>The satellite imagery of Landsat 8 from the United States Geological Survey (USGS) with spatial resolution of 30 meters will be downloaded (EarthExplorer, n.d.). I will perform supervised classification using Random Forest algorithm to create a forest/non-forest map. Using landscape metrics package in RStudio, I will calculate landscape metrics such as Patch Density (PD), Edge Density (ED), Mean Patch Size (MPS), Largest Patch Index (LPI), and Euclidean Nearest Neighbor Distance (ENN). The description for each metric is shown in Table 1. To estimate carbon stocks, I will utilize allometric equations developed by Aabeyir et al.&nbsp;(2020) in combination with field measurements of diameter at breast height and tree height supplied by Ostrom Climate. I will also use the Normalized Difference Vegetation Index (NDVI) derived from Landsat 8 as a proxy for biomass, calibrating it with the field data. Finally, I will use linear regression to quantify the relationship between the calculated metrics and the estimated carbon stocks (Lei et al., 2024). The results allow me to assess how different fragmentation patterns relate to carbon sequestration capacity in the area.</p>
+</section>
+<section id="expected-results-and-significance" class="level1">
+<h1>Expected results and significance</h1>
+<p>I expect a negative correlation between fragmentation metrics (such as Edge Density and Patch Density) and carbon sequestration capacity. Specifically, area with higher edge density will show lower carbon stocks due to increased edge effect. In addition, continuous forest patches (indicated by higher Mean Patch Size and Largest Patch Index) will demonstrate greater carbon sequestration capacity. Similar findings have been observed in research indicating that, in non-commercial forests, fragmentation reduces the carbon storage due to the influence of patch area, edge and patchy connection(Lei et al., 2024). The Figure 1 illustrates the correlation between each fragmentation metric and its corresponding carbon stock.</p>
+<p>The results will provide implications such as climate change mitigation. Understanding how fragmentation affects carbon storage can contribute to more accurate estimates of carbon stocks and potential emissions from forest degradation. Another significance from this study is demonstration of carbon sequestration benefits of maintaining large and contiguous forest patches. This insight is particularly significant for guiding conservation strategies and improving land management practices.</p>
+</section>
+<section id="figures-and-tables" class="level1">
+<h1>Figures and Tables</h1>
+<p>Table 1. Selected landscape metrics for quantifying landscape pattern</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 45%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Abbreviation</th>
+<th>Definition</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Patch Density</td>
+<td>PD</td>
+<td>Number of patches in the landscape</td>
+<td>Class</td>
+</tr>
+<tr class="even">
+<td>Edge Density</td>
+<td>ED</td>
+<td>Total length of all edge segments per hectare</td>
+<td>Class</td>
+</tr>
+<tr class="odd">
+<td>Mean Patch Size</td>
+<td>MPS</td>
+<td>Average size of patches in the landscape</td>
+<td>Class</td>
+</tr>
+<tr class="even">
+<td>Largest Patch Index</td>
+<td>LPI</td>
+<td>Percentage of the total landscape area comprised by the largest patch.</td>
+<td>Class</td>
+</tr>
+<tr class="odd">
+<td>Euclidean Nearest Neighbor Distance</td>
+<td>ENN</td>
+<td>Measurement of the straight-line distance between the focal patch and its nearest neighboring patch of the same class.</td>
+<td>Class</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="C:/Users/hphung.stu/OneDrive%20-%20UBC/Documents/GitHub/My-E-portfolio/images/figure_proposal.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. The correlation of the used metrics and their carbon stocks estimation: a) Edge Density; b) Patch Density; c) Mean Patch Size; d) Largest Patch Index</figcaption>
+</figure>
 </div>
-</div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Aabeyir, R., Adu-Bredu, S., Agyare, W. A., &amp; Weir, M. J. C. (2020). Allometric models for estimating aboveground biomass in the tropical woodlands of Ghana, West Africa. <em>Forest Ecosystems</em>, <em>7</em>(1), 41. https://doi.org/10.1186/s40663-020-00250-3</p>
+<p><em>EarthExplorer</em>. (n.d.). Retrieved October 25, 2024, from https://earthexplorer.usgs.gov/</p>
+<p>Fischer, R., Taubert, F., Müller, M. S., Groeneveld, J., Lehmann, S., Wiegand, T., &amp; Huth, A. (2021). Accelerated forest fragmentation leads to critical increase in tropical forest edge area. <em>Science Advances</em>, <em>7</em>(37), eabg7012. https://doi.org/10.1126/sciadv.abg7012</p>
+<p>Hou, Y., Wang, L., Li, Z., Ouyang, X., Xiao, T., Wang, H., Li, W., &amp; Nie, X. (2024). Landscape fragmentation and regularity lead to decreased carbon stocks in basins: Evidence from century-scale research. <em>Journal of Environmental Management</em>, <em>367</em>, 121937. https://doi.org/10.1016/j.jenvman.2024.121937</p>
+<p>Jiao, J., Cheng, Y., Hong, P., Ma, J., Yao, L., Jiang, B., Xu, X., &amp; Wu, C. (2024). Impact of Fragmentation on Carbon Uptake in Subtropical Forest Landscapes in Zhejiang Province, China. <em>Remote Sensing</em>, <em>16</em>(13), Article 13. https://doi.org/10.3390/rs16132393</p>
+<p>Lei, H., Duan, D., Chen, Y., Guo, H., Li, J., &amp; Li, X. (2024). Effects of landscape fragmentation of plantation forests on carbon storage in the Loess Plateau, China. <em>Journal of Arid Land</em>, <em>16</em>(2), 266–281. https://doi.org/10.1007/s40333-024-0005-3</p>
+<p>Ma, L., Shen, C., Lou, D., Fu, S., &amp; Guan, D. (2017). Ecosystem carbon storage in forest fragments of differing patch size. <em>Scientific Reports</em>, <em>7</em>(1), 13173. https://doi.org/10.1038/s41598-017-13598-4</p>
 
 
 </section>
