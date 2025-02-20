@@ -32,7 +32,10 @@ Table 1. Selected landscape metrics for quantifying landscape pattern
 | Largest Patch Index | LPI | Percentage of the total landscape area comprised by the largest patch. | Class |
 | Euclidean Nearest Neighbor Distance | ENN | Measurement of the straight-line distance between the focal patch and its nearest neighboring patch of the same class. | Class |
 
-![Figure 1. The correlation of the used metrics and their carbon stocks estimation: a) Edge Density; b) Patch Density; c) Mean Patch Size; d) Largest Patch Index](C:/Users/hphung.stu/OneDrive%20-%20UBC/Documents/GitHub/My-E-portfolio/images/figure_proposal.png)
+
+::: {html}
+<img src="images/figure_proposal.png" alt="Figure 1. The correlation of the used metrics and their carbon stocks estimation: a) Edge Density; b) Patch Density; c) Mean Patch Size; d) Largest Patch Index" width="500px"/>
+:::
 
 # References
 
