@@ -113,4 +113,7 @@ The interactive map above shows the top 5 suitable sanctuary for the humpback wh
 
 Below is a detailed map highlighting the areas with higher suitability within each sanctuary.
 
-![Humpback Whales Sanctuary](C:/Users/hphung.stu/OneDrive - UBC/Documents/GitHub/My-E-portfolio/images/map_gem510_lab3.png)
+
+::: {html}
+<img src="images/map_gem510_lab3.png" alt="Humpback Whales Sanctuary" width="700px"/>
+:::
