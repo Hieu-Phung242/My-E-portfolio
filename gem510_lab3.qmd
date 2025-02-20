@@ -52,9 +52,6 @@ sanctuary_buffers <- st_read("C:/Users/hphung.stu/OneDrive - UBC/Documents/ArcGI
 
 most_suitable <- st_read("C:/Users/hphung.stu/OneDrive - UBC/Documents/ArcGIS/Projects/Most_Suitable.shp")
 
-
-
-
 ```
 
 
