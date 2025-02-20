@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analysis of Suitable Sanctuaries for Humpback Whales – Your E-Portfolio</title>
+<title>Proposal: Evaluating the Impact of Landsacape Fragmentation on Carbon Sequestration of Forests in Kwahu South, Ghana using Landscape Metrics and Landsat 8 Data – Your E-Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -157,15 +191,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analysis of Suitable Sanctuaries for Humpback Whales</h1>
+<h1 class="title">Proposal: Evaluating the Impact of Landsacape Fragmentation on Carbon Sequestration of Forests in Kwahu South, Ghana using Landscape Metrics and Landsat 8 Data</h1>
 </div>
 
 
@@ -182,46 +223,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Background</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Objectives</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Data descriptions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">References</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Hawaii is an archipelago located in the central Pacific Ocean, approximately 3850 km from Californa, USA (World Atlas, n.d). Aside being a wonderful place for visitors, Hawaii archipelago is also home to Humpback Whales during the winter time. The whales swim from Alaska to Hawaii to mate, give birth, and nurture their calves (Hawaii Wildlife Fund, n.d). Recognized as one of the world’s most vital humpback whale habitats, the Hawaiian Islands Humpback Whale National Marine Sanctuary was established in 1992 to safeguard humpback whales (Megaptera novaeangliae) and their habitat in Hawai‘i (Division of Aquatic Resources, n.d). However, there have been reports about collisions between whales and human activities and objects such as cruise ships, whale watching boats, and fishing boats. Therefore, government agencies are working to identify the most suitable and expansive areas to incorporate into the sanctuary.</p>
-<p>In order to complete the tasks, suitability analysis and overlay analysis were performed. Suitability analysis is a process used to determine the suitability of an area for a particular use or purpose based on given weighted criteria (ESRI a, n.d). Overlay analysis is a common method used in suitability analysis, which combines multiple dataset to create a comprehensive assessment (ArcMap, n,d).</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<ul>
-<li>The main objectives of this task is to create areas of the 5 most suitable sanctuary for Humpback Whales in Hawaii based on the weighted suitability index.</li>
-</ul>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<ul>
-<li>The data is obtained from UBC-postgres database. The necessary dataset used in this task are whale species, regions in which the whales appear, human activities that affect the whales.</li>
-</ul>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p>ArcMap. (n.d). Overlay analysis. https://desktop.arcgis.com/en/arcmap/latest/analyze/commonly-used-tools/overlay-analysis.htm</p>
-<p>Division of Aquatic Resources. (n.d). Hawaiian Islands Humpback Whale National Marine Sanctuary (HIHWNMS). https://dlnr.hawaii.gov/dar/marine-managed-areas/hawaiian-islands-humpback-whale-national-marine-sanctuary-hihwnms/</p>
-<p>ESRI. (n.d). Perform a suitability analysis. https://pro.arcgis.com/en/pro-app/latest/help/analysis/business-analyst/understanding-suitability-analysis.htm</p>
-<p>Hawaii Wildlife Fund. (n.d). Humpback Whale. https://www.wildhawaii.org/wildlife/whales/</p>
-<p>World Atlas. (n.d). Maps of Hawaii. https://www.worldatlas.com/maps/united-states/hawaii</p>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</section>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
+<p>You can add options to executable code like this</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
 </div>
-<div class="{html}">
-<iframe src="interactive_map.html" width="100%" height="600px">
-</iframe>
 </div>
-<p>The interactive map above shows the top 5 suitable sanctuary for the humpback whales. These areas were identified through a suitability analysis based on three key factors: area size, whale sighting frequency, and vessel traffic. The 5 km buffer zones around each sanctuary highlight potential areas of influence, while the most suitable areas within the sanctuaries are emphasized in red. This visualization helps inform decision-making for marine conservation and habitat protection.</p>
-<p>Below is a detailed map highlighting the areas with higher suitability within each sanctuary.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="C:/Users/hphung.stu/OneDrive%20-%20UBC/Documents/GitHub/My-E-portfolio/images/map_gem510_lab3.png" class="img-fluid figure-img"></p>
-<figcaption>Humpback Whales Sanctuary</figcaption>
-</figure>
-</div>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
