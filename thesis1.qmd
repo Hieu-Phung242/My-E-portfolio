@@ -7,3 +7,34 @@ editor: visual
 ## This is my Master's Thesis at Tampere University
 
 
+
+## Introduction
+
+CO2 capture via electrolysis in molten salt is one of the methods that
+draws attention of scientists and researchers due to its valuable product and sustainability. The basic idea of this method is to use molten salts, with the help from anode and cathode, to capture and convert CO2 to valuable carbon-products such as carbon nanofiber (CNF), carbon nano onions (CNO), or carbon nanotubes (CNT). (Wu et al. 2017)
+
+Nevertheless, this technology has drawbacks as well. Several research showed that there was a heavy corrosion on the anode used in molten salt electrolysis (Wu et al., 2017; Tang et al., 2018). Besides, lithium carbonate, which is mainly used in molten salt electrolysis, is becoming scarce (Reuter 2022). Hence, new carbonate salt and a suitable anode material should be researched to cope with the issue of corrsion and scarcity of lithium carbonate.
+
+The main aim of this thesis work is to find suitable and inexpensive materials for electrodes to hold off the corrosion during molten salt electrolysis process. In addition, a system for molten carbonate salt electrolysis is designed and constructed for testing the materials in a laboratory scale system. Furthermore, the growth of CNT is investigated by zinc coated iron electrode to see if iron can catalyze the formation of CNT. 
+
+This thesis work is part of Hydrogen and Carbon Value Chains in Green Electrification
+(HYGCEL) project, in which new value chains from the development of Power-to-X (P2X)
+market was identified, plus, a guidance for electricity and hydrogen-based infrastructure
+should be examined. The work is in work package 5 (WP5), which concentrates on
+techno-economy of solid carbon products. The project is a collaborative project between
+Tampere University and Lappeenranta-Lahti University of Technology.
+
+
+
+## Theoretical background
+
+
+
+
+
+
+
+
+
+
+
