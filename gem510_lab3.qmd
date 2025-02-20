@@ -17,7 +17,7 @@ In order to complete the tasks, suitability analysis and overlay analysis were p
 
 ## Data descriptions
 
--   The data is obtained from UBC-postgres database.The necessary dataset used in this task are whale species, regions in which the whales appear, human activities that affect the whales.
+-   The data is obtained from UBC-postgres database. The necessary dataset used in this task are whale species, regions in which the whales appear, human activities that affect the whales.
 
 ## References
 
