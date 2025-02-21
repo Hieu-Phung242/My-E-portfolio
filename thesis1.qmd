@@ -12,10 +12,7 @@ The main aim of this thesis work is to find suitable and inexpensive materials f
 
 This thesis work is part of Hydrogen and Carbon Value Chains in Green Electrification (HYGCEL) project, in which new value chains from the development of Power-to-X (P2X) market was identified, plus, a guidance for electricity and hydrogen-based infrastructure should be examined. The work is in work package 5 (WP5), which concentrates on techno-economy of solid carbon products. The project is a collaborative project between Tampere University and Lappeenranta-Lahti University of Technology.
 
-
-
 ### Mechanism of CO~2~ capture and reduction using molten carbonate salt
-
 
 In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental carbon on the cathode during electrolysis of molten salt via a three-step electrochemical-chemical-electrochemical CO~2~ reduction (Ijije et al., 2014)
 
@@ -36,6 +33,5 @@ In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental
     3 CO~2~ + 4e^-^ -\> C + 2 CO~3~^2-^ (4)
 
 ::: {html}
-<img src="images/co2_capture.png" alt="Figure 1. Illustration of the reduction of CO~2~ to carbon" width="600px"/>
+<img src="images/co2_capture.png" alt="Figure 1. Illustration of the reduction of CO2 to carbon" width="600px"/>
 :::
-
