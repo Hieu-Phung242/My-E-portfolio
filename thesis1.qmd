@@ -6,35 +6,58 @@ editor: visual
 
 ## This is my Master's Thesis at Tampere University
 
-
-
 ## Introduction
 
-CO2 capture via electrolysis in molten salt is one of the methods that
-draws attention of scientists and researchers due to its valuable product and sustainability. The basic idea of this method is to use molten salts, with the help from anode and cathode, to capture and convert CO2 to valuable carbon-products such as carbon nanofiber (CNF), carbon nano onions (CNO), or carbon nanotubes (CNT). (Wu et al. 2017)
+CO2 capture via electrolysis in molten salt is one of the methods that draws attention of scientists and researchers due to its valuable product and sustainability. The basic idea of this method is to use molten salts, with the help from anode and cathode, to capture and convert CO2 to valuable carbon-products such as carbon nanofiber (CNF), carbon nano onions (CNO), or carbon nanotubes (CNT). (Wu et al. 2017) Nevertheless, this technology has drawback. Several research showed that there were heavy corrosions on the anode used in molten salt electrolysis (Wu et al., 2017; Tang et al., 2018). Besides, lithium carbonate, which is mainly used in molten salt electrolysis, is becoming scarce (Reuter 2022). Hence, new carbonate salt and a suitable anode material should be researched to cope with the issue of corrsion and scarcity of lithium carbonate.
 
-Nevertheless, this technology has drawbacks as well. Several research showed that there was a heavy corrosion on the anode used in molten salt electrolysis (Wu et al., 2017; Tang et al., 2018). Besides, lithium carbonate, which is mainly used in molten salt electrolysis, is becoming scarce (Reuter 2022). Hence, new carbonate salt and a suitable anode material should be researched to cope with the issue of corrsion and scarcity of lithium carbonate.
+The main aim of this thesis work is to find suitable and inexpensive materials for electrodes to hold off the corrosion during molten salt electrolysis process. In addition, a system for molten carbonate salt electrolysis is designed and constructed for testing the materials in a laboratory scale system. Furthermore, the growth of CNT is investigated by zinc coated iron electrode to see if iron can catalyze the formation of CNT.
 
-The main aim of this thesis work is to find suitable and inexpensive materials for electrodes to hold off the corrosion during molten salt electrolysis process. In addition, a system for molten carbonate salt electrolysis is designed and constructed for testing the materials in a laboratory scale system. Furthermore, the growth of CNT is investigated by zinc coated iron electrode to see if iron can catalyze the formation of CNT. 
-
-This thesis work is part of Hydrogen and Carbon Value Chains in Green Electrification
-(HYGCEL) project, in which new value chains from the development of Power-to-X (P2X)
-market was identified, plus, a guidance for electricity and hydrogen-based infrastructure
-should be examined. The work is in work package 5 (WP5), which concentrates on
-techno-economy of solid carbon products. The project is a collaborative project between
-Tampere University and Lappeenranta-Lahti University of Technology.
-
-
+This thesis work is part of Hydrogen and Carbon Value Chains in Green Electrification (HYGCEL) project, in which new value chains from the development of Power-to-X (P2X) market was identified, plus, a guidance for electricity and hydrogen-based infrastructure should be examined. The work is in work package 5 (WP5), which concentrates on techno-economy of solid carbon products. The project is a collaborative project between Tampere University and Lappeenranta-Lahti University of Technology.
 
 ## Theoretical background
 
+### Mechanism of CO~2~ capture and reduction using molten carbonate salt
 
+*Direct reduction of CO2 to carbon*
 
+In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental carbon on the cathode during electrolysis of molten salt via a three-step electrochemical-chemical-electrochemical CO~2~ reduction (Ijije et al., 2014)
 
+-   1st step:
 
+    CO~2~ + 2e^-^ \<-\> CO~2~^2-^
 
+-   2nd step:
 
+    CO~2~ ^2-^ -\> CO + O^2-^
 
+-   3rd step:
 
+    CO + 2e^-^ -\> C + 2 CO~3~^2-^
 
+-   Overall reaction:
 
+    3 CO~2~ + 4e^-^ -\> C + 2 CO~3~^2-^
+
+*Indirect reduction of CO~2~ to carbon*
+
+In indirect reduction of CO2 to carbon, CO32- is the ion that is reduced to carbon, and CO2 is used to regenerate the CO~3~^2-^, hence, CO~2~ is indirectly involving to the process of forming the carbon product (Ijije et al., 2014). The CO~3~^2-^ can be reduced via 3 routes:
+
+-   1st route:
+
+    CO~3~^2-^ +4e^-^ -\> CO~2~^2-^ + O^2-^
+
+    CO~2~ + O^2-^ -\> CO~3~^2-^
+
+-   2nd route:
+
+    CO~3~^2-^ + 2e^-^ -> CO~2~^2-^ + O^2-^
+    
+    CO~2~^2-^ + 2e^-^ -> C + O^2-^
+    
+-   3rd route:
+
+    M^+^ + x e^-^ -> M
+    
+    2x M + M~x~CO~3~ -> C + 3M~x~O
+    
+In the 1st route, 
