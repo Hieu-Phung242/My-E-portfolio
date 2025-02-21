@@ -17,3 +17,23 @@ For wastewater treatment design
 For sludge treatment design
 <a href="excel/Project work 3_Sludge_Hieu Phung.xlsx" download> <button>Download</button> </a>
 :::
+
+## Process Diagram
+
+::: panel-tabset
+
+## Water Treatment Process
+
+<img src="images/water_treatment.png" alt="Water Treatment Flow Diagram" width="1200px"/>
+
+
+## Wastewater Treatment Process
+
+<img src="images/wastewater_treatment.png" alt="Wastewater Treatment Flow Diagram" width="1200px"/>
+
+
+## Sludge Treatment Process
+
+<img src="images/sludge_treatment.png" alt="Sludge Treatment Diagram" width="600px"/>
+
+:::
