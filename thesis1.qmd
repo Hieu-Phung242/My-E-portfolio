@@ -40,16 +40,16 @@ In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental
 
 ::: {html}
 <div style="display: flex; gap: 15px;">
-  <a href="images/co2_capture.png" target="_blank">
-    <img src="images/co2_capture.png" width="100px" alt="Thumbnail 1">
+  <a href="/images/co2_capture.png" target="_blank">
+    <img src="/images/co2_capture.png" width="100px" alt="Thumbnail 1">
   </a>
 
-  <a href="images/MGEM_logo.png" target="_blank">
-    <img src="images/MGEM_logo.png" width="100px" alt="Thumbnail 2">
+  <a href="/images/MGEM_logo.png" target="_blank">
+    <img src="/images/MGEM_logo.png" width="100px" alt="Thumbnail 2">
   </a>
 
-  <a href="images/figure_proposal.png" target="_blank">
-    <img src="images/figure_proposal.png" width="100px" alt="Thumbnail 3">
+  <a href="/images/figure_proposal.png" target="_blank">
+    <img src="/images/figure_proposal.png" width="100px" alt="Thumbnail 3">
   </a>
 </div>
 :::
