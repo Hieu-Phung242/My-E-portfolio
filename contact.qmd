@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-Email: [phungchihieu24296\@gmail.com](mailto:phungchihieu24296@gmail.com)
+Email: [phungchihieu24296@gmail.com](mailto:phungchihieu24296@gmail.com)
 
 ::: {html}
 <a href="https://www.linkedin.com/in/hieu-phung-465699154/" target="_blank"> <i class="fab fa-linkedin"></i> LinkedIn 
