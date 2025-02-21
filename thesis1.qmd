@@ -59,3 +59,17 @@ The experimental system was designed for specific purposes. Several experiments 
 
 <img src="images/sno2_surface.png" alt="SEM photo of the surface of SnO2 for corrosion analysis" width="600px"/>
 :::
+
+
+### References
+
+Ijije, H. V., Lawrence, R. C., Chen, G. Z. (2014a). Carbon electrodeposition in molten
+salts: electrode reaction and application. RSC advances. Vol. 4(67), pp. 35808 –
+35817.
+
+Tang, D., Zheng, K., Yin, H., Mao, X., Sadoway, D. R., Wang, D. (2018). Electrochemical growth of a corrosion-resistant multi-layer scale to enable an oxygen-evolution inert
+anode in molten carbonate. Electrochimica acta. Vol. 279, pp. 250 – 257
+
+Wu, H., Li, Z., Ji, D., Liu, Y., Yi, G., Yuan, D., Wang, B., Zhang, Z. (2017). Effect of
+molten carbonate composition on the generation of carbon material. RSC advances.
+Vol. 7(14), pp. 8467 – 8473
