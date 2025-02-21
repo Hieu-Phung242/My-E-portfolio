@@ -43,17 +43,19 @@ Several experiments were done to test the durability of anodes and formation of 
 ### Example Results
 
 ::: panel-tabset
-
 ## Figure 2
+
 <img src="images/experiment_design.png" alt="Preliminary design for a part of experimental systems" width="600px"/>
 
-## Figure 3 
+## Figure 3
+
 <img src="images/li2co3_steel_sno2.png" alt="SEM photo of carbon products when galvanized steel (cathode) and tin dioxide (anode) were used in Li2CO3" width="600px"/>
 
 ## Figure 4
+
 <img src="images/mix_ni_sno2.png" alt="SEM photo of carbon products when nickel (cathode) and tin dioxide (anode) were used in CaCO3-Na2CO3-K2CO3" width="600px"/>
 
 ## Figure 5
-<img src="images/sno2_surface.png" alt="SEM photo of the surface of SnO2 for corrosion analysis" width="600px"/>
 
+<img src="images/sno2_surface.png" alt="SEM photo of the surface of SnO2 for corrosion analysis" width="600px"/>
 :::
