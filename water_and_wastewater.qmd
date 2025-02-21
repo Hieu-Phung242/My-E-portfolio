@@ -5,3 +5,7 @@ editor: visual
 ---
 
 
+In this section, I will show an example of how a water treatment, a wastewater treatment, and sludge treatment plant is designed. The work was done mostly in excel with an initial value of input flowrate to the water treatment plant. Detailed design for each units in a plant will be shown in the attached excel files. 
+
+
+
