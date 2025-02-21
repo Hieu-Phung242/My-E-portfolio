@@ -36,20 +36,24 @@ In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental
 <img src="images/co2_capture.png" alt="Figure 1. Illustration of the reduction of CO2 to carbon" width="600px"/>
 :::
 
+### Experimental methods
+
+Several experiments were done to test the durability of anodes and formation of carbon products using different combination of carbonate salt. The anodes which were used in this thesis were nickel, tin dioxides (SnO~2~), and galvanized steel. The combination of salt used in this experiment were Li~2~CO~3~ and Na~2~CO~3~-K~2~CO~3~-CaCO~3~.
+
 ### Example Results
 
-::: {html}
-<div style="display: flex; gap: 15px;">
-  <a href="/images/co2_capture.png" target="_blank">
-    <img src="/images/co2_capture.png" width="100px" alt="Thumbnail 1">
-  </a>
+::: panel-tabset
 
-  <a href="/images/MGEM_logo.png" target="_blank">
-    <img src="/images/MGEM_logo.png" width="100px" alt="Thumbnail 2">
-  </a>
+## Figure 2
+<img src="images/experiment_design.png" alt="Preliminary design for a part of experimental systems" width="600px"/>
 
-  <a href="/images/figure_proposal.png" target="_blank">
-    <img src="/images/figure_proposal.png" width="100px" alt="Thumbnail 3">
-  </a>
-</div>
+## Figure 3 
+<img src="images/li2co3_steel_sno2.png" alt="SEM photo of carbon products when galvanized steel (cathode) and tin dioxide (anode) were used in Li2CO3" width="600px"/>
+
+## Figure 4
+<img src="images/mix_ni_sno2.png" alt="SEM photo of carbon products when nickel (cathode) and tin dioxide (anode) were used in CaCO3-Na2CO3-K2CO3" width="600px"/>
+
+## Figure 5
+<img src="images/sno2_surface.png" alt="SEM photo of the surface of SnO2 for corrosion analysis" width="600px"/>
+
 :::
