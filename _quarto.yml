@@ -30,7 +30,7 @@ website:
             text: Molten Salt Carbonate Electrolysis
           - href: thesis2.qmd
             text: Effect of Nanoparticles on TiO2
-          - href: water_and_wastewater
+          - href: water_and_wastewater.qmd
           - text: Design of Water, Wastewater, and Sludge Treatment
       - href: contact.qmd
         text: Contact
