@@ -1,5 +1,5 @@
 ---
-title: "Design of Water + Wastewater + Sludge Treatment"
+title: "Design of Water, Wastewater, Sludge Treatment"
 format: html
 editor: visual
 ---
