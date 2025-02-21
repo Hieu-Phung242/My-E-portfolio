@@ -52,7 +52,7 @@ In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental
   </div>
   <div class="col">
     <a href="images/figure_proposal.png" target="_blank">
-      <img src="images/image3.png" width="100px" alt="Thumbnail 3">
+      <img src="images/figure_proposal.png" width="100px" alt="Thumbnail 3">
     </a>
   </div>
 </div>
