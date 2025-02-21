@@ -38,7 +38,7 @@ In direct reduction of CO~2~ to carbon, CO~2~ is converted directly to elemental
 
 ### Experimental methods
 
-Several experiments were done to test the durability of anodes and formation of carbon products using different combination of carbonate salt. The anodes which were used in this thesis were nickel, tin dioxides (SnO~2~), and galvanized steel. The combination of salt used in this experiment were Li~2~CO~3~ and Na~2~CO~3~-K~2~CO~3~-CaCO~3~.
+The experimental system was designed for specific purposes. Several experiments were done to test the durability of anodes and formation of carbon products using different combination of carbonate salt. The anodes which were used in this thesis were nickel, tin dioxides (SnO~2~), and galvanized steel. The combination of salt used in this experiment were Li~2~CO~3~ and Na~2~CO~3~-K~2~CO~3~-CaCO~3~.
 
 ### Example Results
 
