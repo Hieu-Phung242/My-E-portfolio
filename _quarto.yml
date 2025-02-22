@@ -33,7 +33,7 @@ website:
           - href: water_and_wastewater.qmd
             text: Design of Water, Wastewater, and Sludge Treatment
           - href: water_and_sewer.qmd
-            text: Water and Sewer Distribution Design
+            text: Water and Sewer Network Design
       - href: contact.qmd
         text: Contact
 
